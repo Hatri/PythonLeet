@@ -21,3 +21,12 @@ class Solution:
         numberOfWays = int(letter > '')
         previousDigit = ''
     
+        for digit in letter:
+            copyPrevious = previousNumberWays
+            previousNumberWays = numberOfWays
+
+            numberOfWays = (digit > '0') * numberOfWays
+            numberOfWays += (9 < int(previousDigit + digit) < 27) * copyPrevious
+            previousDigit = digit
+
+        return numberOfWays 
