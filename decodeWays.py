@@ -16,4 +16,8 @@ Explanation: It could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
 '''
 
 class Solution:
-    def deCoding()
+    def deCoding(self, letter: string) -> int:
+        previousNumberWays = 0
+        numberOfWays = int(letter > '')
+        previousDigit = ''
+    
