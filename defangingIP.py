@@ -12,3 +12,10 @@ Output: "255[.]100[.]50[.]0"
 Constraints:
     The given address is a valid IPv4 address.
 '''
+
+#Time Complexity: 0(n)
+#Space Complexity: 0(1)
+
+class Solution:
+    def defangIPadress(self, adress: str) -> str:
+        return '[.]'.join(adress.split('.'))
