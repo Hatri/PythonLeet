@@ -28,3 +28,15 @@ class Solution:
         m, n = len(matrix), len(matrix[0])
         rowMinimal = [10**5 + 1] * m
         colMax = [0] * n
+
+        for i in range(m):
+            for j in range(m):
+                rowMinimal[i] = rowMinimal[i] if rowMinimal[i] < matrix[i][j] else matrix[i][j]
+                colMax[j] = colMax[j] if colMax[j] < matrix[i][j] else matrix[i][j]
+
+        result = []
+        for i in rowMinimal:
+            if i in colMax:
+                result.append(i)
+
+        return result
