@@ -21,3 +21,10 @@ Constraints:
     1 <= matrix[i][j] <= 10^5.
     All elements in the matrix are distinct.
 '''
+
+
+class Solution:
+    def luckyNumbers(self, matrix: List[List[int]]) -> List[int]:
+        m, n = len(matrix), len(matrix[0])
+        rowMinimal = [10**5 + 1] * m
+        colMax = [0] * n
